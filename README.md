@@ -68,7 +68,7 @@ This repository tracks notable **commercial condition monitoring platforms**, **
 
 ## 🔓 Open-Source GitHub Projects
 
-*Sorted by GitHub Star Count (Descending)*
+*Sorted by GitHub Stars_Count (Descending)*
 
 ### ⚡ Vibration Analysis & Signal Processing Toolkits
 
