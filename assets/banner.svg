@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="50%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#090D16" />
+    </linearGradient>
+
+    <!-- Accent Gradient -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#C084FC" />
+    </linearGradient>
+
+    <!-- Wave Signal Gradient -->
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#3B82F6" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#A855F7" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.5" stroke-opacity="0.4" />
+    </pattern>
+
+    <!-- Subtle Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title {
+      font-family: 'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 42px;
+      fill: url(#titleGrad);
+    }
+    .subtitle {
+      font-family: 'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      fill: #94A3B8;
+    }
+    .tagline {
+      font-family: 'Segoe UI', -apple-system, Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      fill: #38BDF8;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .pulse-line {
+      fill: none;
+      stroke: url(#waveGrad);
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: dash 6s linear infinite;
+    }
+    .node-pulse {
+      animation: pulse 2s ease-in-out infinite alternate;
+    }
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    @keyframes pulse {
+      0% { r: 4px; opacity: 0.6; }
+      100% { r: 8px; opacity: 1; filter: drop-shadow(0 0 8px #38BDF8); }
+    }
+  </style>
+
+  <!-- Base Rectangle Background -->
+  <rect width="1200" height="320" rx="16" fill="url(#bgGrad)" />
+  <rect width="1200" height="320" rx="16" fill="url(#grid)" />
+
+  <!-- Animated Vibration Signal / Waveform (Background / Lower Half Decorative Element) -->
+  <g opacity="0.35" transform="translate(0, 110)">
+    <path d="M 0 100 Q 150 40, 300 100 T 600 100 T 900 100 T 1200 100" fill="none" stroke="#1E293B" stroke-width="8"/>
+    <path class="pulse-line" d="M 0 100 Q 75 20, 150 100 T 300 100 L 340 40 L 370 170 L 400 20 L 430 140 L 460 100 T 600 100 Q 675 160, 750 100 T 900 100 L 930 50 L 960 150 L 990 30 L 1020 100 T 1200 100" />
+  </g>
+
+  <!-- Decorative Glowing Nodes (Sensor Points) -->
+  <circle cx="340" cy="150" r="5" fill="#38BDF8" class="node-pulse" />
+  <circle cx="370" cy="280" r="5" fill="#818CF8" class="node-pulse" style="animation-delay: 0.5s;" />
+  <circle cx="400" cy="130" r="5" fill="#22D3EE" class="node-pulse" style="animation-delay: 1s;" />
+  <circle cx="930" cy="160" r="5" fill="#C084FC" class="node-pulse" style="animation-delay: 0.7s;" />
+  <circle cx="960" cy="260" r="5" fill="#38BDF8" class="node-pulse" style="animation-delay: 1.2s;" />
+
+  <!-- Foreground Content Container (Ensures Text remains crisp and unhidden) -->
+  <g transform="translate(60, 0)">
+    <!-- Category Badge -->
+    <rect x="0" y="52" width="410" height="32" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <text x="20" y="73" class="tagline">⚙️ Predictive Maintenance &amp; IIoT</text>
+
+    <!-- Main Title -->
+    <text x="0" y="140" class="title" filter="url(#glow)">Industrial Equipment Condition Monitoring</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="185" class="subtitle">Curated SaaS Platforms, Vibration Analysis &amp; Open-Source Fault Diagnosis</text>
+
+    <!-- Stat Badges Row -->
+    <g transform="translate(0, 220)">
+      <!-- Badge 1: Vibration & Acoustics -->
+      <rect x="0" y="0" width="190" height="36" rx="8" fill="#0F172A" stroke="#38BDF8" stroke-width="1" opacity="0.9"/>
+      <text x="15" y="23" font-family="Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#E2E8F0">📊 Vibration Signal DSP</text>
+
+      <!-- Badge 2: AI Fault Diagnosis -->
+      <rect x="205" y="0" width="180" height="36" rx="8" fill="#0F172A" stroke="#818CF8" stroke-width="1" opacity="0.9"/>
+      <text x="220" y="23" font-family="Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#E2E8F0">🤖 AI Fault Detection</text>
+
+      <!-- Badge 3: Modal Analysis & Health Scoring -->
+      <rect x="400" y="0" width="220" height="36" rx="8" fill="#0F172A" stroke="#C084FC" stroke-width="1" opacity="0.9"/>
+      <text x="415" y="23" font-family="Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#E2E8F0">📈 Modal Analysis &amp; Scoring</text>
+    </g>
+  </g>
+</svg>
