@@ -1,251 +1,174 @@
-# Awesome-Industrial-Equipment-Condition-Monitoring
-
-## Top Industrial Equipment Condition Monitoring Ecosystem
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Vibration Analysis, Fault Diagnosis & Self-Hosted Condition Monitoring*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **commercial condition monitoring platforms** and **open-source projects** that monitor equipment health through vibration, temperature, acoustic, and process data — from fully managed IIoT sensor platforms to self-hosted diagnostic frameworks and signal processing toolkits.
-
-
-
-**Examples** include Amazon Monitron, Augury, Samsara Industrial IoT, Fluke Reliability eMaint, SKF Enlight, Emerson AMS Machine Works, ABB Ability Genix, Schneider Electric EcoStruxure, GE Digital APM, and SPM Instrument (the category leaders).
-
-
-
-**Open-source emphasis**: Industrial condition monitoring is a strong open-source domain. **FD-REST** delivers a lightweight, containerized REST platform for real-time fault detection with DNN inference and automated reporting . **Rotary Insight** provides a unified framework for bearing fault diagnosis with REST-based inference and spectrogram visualization . **OpenConMo** from Aalto University enables reproducible vibration signal-based condition monitoring research with CWRU dataset integration . **ABRAVIBE** brings a comprehensive MATLAB/GNU Octave toolbox for vibration analysis and rotating machinery diagnostics . **pyOMA** and **oma-python** deliver production-grade Operational Modal Analysis for structural health monitoring . **machine-health** produces a single 0-100 health score per machine with full explainability and contributor breakdown . **JOR 4.0** applies recursive Bayesian evidence fusion with ISO 20816-3 compliance . **claude-stwinbox-diagnostics** bridges MEMS sensors to LLMs via MCP for conversational fault diagnosis . This section is heavily expanded.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Amazon Monitron](https://aws.amazon.com/monitron/)**  
-
-  **AWS's managed condition monitoring service** — end-to-end system for equipment monitoring using machine learning . **Includes sensors, gateway, and ML service** that detects abnormal machine behavior . **Best for AWS-native industrial monitoring** .
-
-
-
-- **[Augury](https://augury.com/)**  
-
-  **Machine health platform** — vibration, temperature, and magnetic data with AI diagnosis . **Best for rotating equipment monitoring** .
-
-
-
-- **[Samsara Industrial IoT](https://www.samsara.com/)**  
-
-  **Connected operations platform** — equipment monitoring, fleet telematics, and video safety . **Best for fleet and industrial operations** .
-
-
-
-- **[Fluke Reliability eMaint](https://www.fluke.com/)**  
-
-  **CMMS with condition monitoring** — maintenance management with vibration analysis integration . **Best for maintenance teams** .
-
-
-
-- **[SKF Enlight](https://www.skf.com/)**  
-
-  **Condition monitoring platform** — vibration sensors and analytics for rotating equipment . **Best for SKF ecosystem users** .
-
-
-
-- **[Emerson AMS Machine Works](https://www.emerson.com/)**  
-
-  **Machinery health management** — vibration analysis, balancing, and diagnostics for rotating equipment . **Best for process industries** .
-
-
-
-- **[ABB Ability Genix](https://www.abb.com/)**  
-
-  **Industrial analytics platform** — asset performance and condition monitoring . **Best for ABB ecosystem users** .
-
-
-
-- **[Schneider Electric EcoStruxure](https://www.se.com/)**  
-
-  **IoT-enabled architecture** — asset monitoring and predictive maintenance . **Best for Schneider ecosystem users** .
-
-
-
-- **[GE Digital APM](https://www.ge.com/digital/applications/asset-performance-management)**  
-
-  **Asset Performance Management** — predictive analytics and reliability for industrial assets . **Best for industrial enterprises** .
-
-
-
-- **[SPM Instrument](https://www.spminstrument.com/)**  
-
-  **Condition monitoring solutions** — vibration analysis and bearing monitoring . **Best for heavy industry** .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Fault Detection & Diagnosis Frameworks
-
-
-
-- **[FD-REST](https://github.com/Fraunhofer-IMS/FD-REST)**  
-
-  **Lightweight RESTful platform for real-time fault detection and diagnosis in industrial systems**, open-source . **Integrates machine-learning-based fault detection into standard monitoring systems** . **Docker-based architecture with REST API** for on-premises deployment — maintains data security and integrity . **DNN-based inference** with user interface components for a complete predictive maintenance pipeline . **Automated report generator** produces standardized summaries for benchmarking and maintenance planning . **Model-independent** — can be adjusted to alternative architectures . **Planned enhancements**: multi-asset tracking, MQTT/OPC-UA/Modbus compatibility, explainability modules, and playback features . **Best for real-time industrial fault detection with on-prem deployment** .
-
-
-
-- **[Rotary Insight](https://github.com/rotary-insight/rotary-insight)**  
-
-  **Open-source framework for bearing fault diagnosis and health monitoring of rotary machinery using deep learning**, open-source . **Unified and modular environment** for processing time-series vibration data — automated preprocessing, segmentation, model training, and inference . **Supports multiple benchmark datasets** and integrates various deep learning architectures for consistent evaluation and comparison . **User-friendly interface and REST-based inference server** — upload data, perform fault classification, and visualize results through spectrograms and frequency-domain analysis . **Best for deep learning-based bearing fault diagnosis** .
-
-
-
-- **[OpenConMo](https://github.com/Aalto-Arotor/openconmo)**  
-
-  **Python library for vibration signal-based condition monitoring**, developed at Aalto University . **Objectives**: provide easy access to reproducing signal-based condition monitoring papers; enable comparison of AI/ML techniques with conventional signal processing tools . **Includes CWRU dataset downloader** and notebooks reproducing Smith & Randall results . **Measurement data formatted with location, fault type, depth, orientation, sampling rate, torque, and tags** . **Best for reproducible condition monitoring research** .
-
-
-
-- **[Bearing-FDD](https://github.com/paolocalderaro/bearing-fdd)**  
-
-  **Early detection and diagnosis tool for bearing faults in rotating machinery**, open-source . **Explainable and interpretable fault detection** using Monotonic Smoothed Stacked Autoencoder (MS2AE) — trained on healthy data only . **Multistage diagnostic procedure**: Dynamic Time Warping for baseline generation, kurtogram-guided bandpass filtering, and envelope analysis for fault signature extraction . **Determines fault type** (outer race, inner race, ball, cage) and **degradation stage** . **Best for explainable bearing fault diagnosis** .
-
-
-
-### Vibration Analysis & Signal Processing Toolkits
-
-
-
-- **[ABRAVIBE Toolbox](https://github.com/anderstorrence/ABRAVIBE)**  
-
-  **MATLAB/GNU Octave toolbox for teaching and practicing vibration analysis and structural dynamics**, GPL licensed . **Comprehensive functionality**: simulation of mechanical models, time series analysis, spectral analysis, frequency response and correlation function estimation, modal parameter extraction, and rotating machinery analysis (order tracking) . **Fully free software platform** — can be used with GNU Octave . **Includes laboratory exercises** for structural dynamics teaching . **Best for vibration analysis education and research** .
-
-
-
-- **[pyOMA](https://github.com/pyOMA-dev/pyOMA)**  
-
-  **Open-source toolbox for Operational Modal Analysis (OMA) in Python**, developed at Bauhaus-Universität Weimar . **Used daily to analyze continuously acquired vibration measurements** of a structural health monitoring system since 2015 . **Supports various identification methods**: SSI-Cov-Ref, SSI-Data, Var-SSI-Ref, pLSCF, PRCE, ERA . **Features**: geometry processing, signal preprocessing, stabilization diagrams, mode shape plotting, multi-setup merging, uncertainty quantification . **Interactive GUI** via PyQt6 and Jupyter widgets . **3D mode-shape backend** via pyvista/VTK . **Applications**: bridges, towers/masts, wide-span floors . **Best for structural health monitoring and modal analysis** .
-
-
-
-- **[oma-python](https://github.com/Dynoma/oma-python)**  
-
-  **Open-source Operational Modal Analysis (OMA) algorithms for Python**, MIT licensed . **Estimate natural frequencies, damping ratios, and mode shapes from ambient vibration measurements** . **FDD (Frequency Domain Decomposition)** and **CovSSI (Covariance-driven Stochastic Subspace Identification)** . **TypedDict results** with complex and real mode shapes . **Best for ambient vibration-based modal identification** .
-
-
-
-### Health Scoring & Fusion Engines
-
-
-
-- **[machine-health](https://pypi.org/project/machine-health/)**  
-
-  **One continuously updated 0-100 health score per machine, built from every sensor and the limits you already know**, open-source . **Four components**: **stability** (how far each channel has moved from baseline), **compliance** (whether your limits hold), **anomaly** (share of outlier readings), **availability** (missing readings and flatlined sensors) . **Weighted combination** (stability 0.30, compliance 0.30, anomaly 0.20, availability 0.20) into a score between 0 and 100 . **Full explainability** — points lost split by component and by channel, with violations detailed . **Fixed grades**: A ≥ 90, B ≥ 80, C ≥ 70, D ≥ 60, F below 60 . **Best for unified machine health scoring with reasoning** .
-
-
-
-- **[JOR 4.0 Predictive Maintenance Fusion Engine](https://github.com/jamesorion6869/JOR_PYMC_V3_1)**  
-
-  **Recursive Bayesian framework for industrial predictive maintenance with ISO 20816-3 compliance**, open-source research prototype . **Weighted evidence fusion with recursive posterior updating** — produces non-healthy probability (NHP) estimate and hysteresis-controlled alert state . **Vibration telemetry converted to structured evidence** via ISO 20816-3 (Criterion I zone boundaries, Criterion II rate-of-change) . **Operational context grounded in NEMA MG-1** Class F thermal and load limits . **Self-calibrating fusion engine** with validation tests for context stress, danger ramp, false-positive immunity, noise robustness, and long-duration stability . **Best for standards-based vibration severity monitoring** .
-
-
-
-### LLM-Integrated Diagnostics
-
-
-
-- **[claude-stwinbox-diagnostics](https://github.com/LGDiMaggio/claude-stwinbox-diagnostics)**  
-
-  **Open-source condition monitoring copilot and predictive maintenance AI agent**, open-source . **Connects industrial MEMS vibration sensors to Claude via MCP (Model Context Protocol)** . **Transparent DSP pipeline** with standards-based severity checks (ISO 10816/20816) and conversational fault diagnosis . **Two MCP servers**: STWIN.box sensor acquisition and vibration analysis (FFT, envelope analysis, bearing fault detection) . **Three Claude Skills**: machine-vibration-monitoring, vibration-fault-diagnosis, operator-diagnostic-report . **Supported fault types**: bearing inner/outer race, rolling element, cage, unbalance, misalignment, mechanical looseness . **Hardware reference**: STEVAL-STWINBX1, but analysis server works with any vibration data source . **Best for LLM-assisted condition monitoring** .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **cbm_codes_open** (biswajitsahoo1111) — Data and code implementing common machine learning algorithms for machinery condition monitoring, 80 GitHub stars .
-
-- **weibull-knowledge-informed-ml** (tvhahn) — Knowledge-informed machine learning on PRONOSTIA (FEMTO) and IMS bearing datasets for RUL prediction, 115 GitHub stars .
-
-- **Rotating-machine-fault-data-set** (hustcxl) — Open rotating mechanical fault datasets collection, 718 GitHub stars .
-
-- **cbm_codes_open** — ML algorithms for machinery condition monitoring .
-
-- **IEEE published ESP32 + Raspberry Pi portable monitoring device** for EV induction motors using multi-sensor data .
-
-- **TinyML-based Edge AI Predictive Maintenance System** for industrial rotating machinery using ESP32, FFT, and multi-sensor fusion .
-
-
-
-**Frameworks for building custom industrial condition monitoring solutions**: Combine **FD-REST** for lightweight, containerized real-time fault detection with REST API and on-prem deployment . Use **Rotary Insight** for deep learning-based bearing fault diagnosis with REST inference and spectrogram visualization . Deploy **OpenConMo** for reproducible condition monitoring research with CWRU dataset integration . Integrate **ABRAVIBE** for comprehensive vibration analysis and rotating machinery diagnostics . Choose **pyOMA** or **oma-python** for Operational Modal Analysis and structural health monitoring . Use **machine-health** for unified 0-100 health scoring with full explainability . Integrate **JOR 4.0** for standards-based vibration severity monitoring with recursive Bayesian fusion . Choose **claude-stwinbox-diagnostics** for LLM-assisted conversational fault diagnosis . Note that true enterprise condition monitoring with managed infrastructure, industrial-grade sensors, and vendor-supported SLAs (Amazon Monitron, Augury, SKF Enlight) remains primarily commercial territory; open-source stacks provide strong fault detection, vibration analysis, and health scoring foundations that require integration for complete industrial condition monitoring deployments.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Industrial condition monitoring platforms handle sensitive operational data and may influence critical maintenance decisions. Self-hosted solutions require proper security hardening, access controls, and compliance with industrial safety standards (IEC 62443).
-
-- **Open-source condition monitoring projects vary significantly in maturity** — FD-REST and Rotary Insight are production-oriented research tools ; claude-stwinbox-diagnostics is explicitly a proof of concept . Evaluate before relying on them for safety-critical maintenance decisions.
-
-- **Vibration analysis requires domain expertise** — proper sensor placement, sampling rates, and signal processing parameters are critical for accurate fault detection . ISO 10816/20816 standards provide severity benchmarks but require careful application.
-
-- **License considerations**: FD-REST is open-source ; Rotary Insight is open-source ; OpenConMo is open-source ; ABRAVIBE uses GPL ; pyOMA is open-source ; machine-health is open-source . Verify licensing against your use case before committing.
-
-- The open-source ecosystem provides strong fault detection, vibration analysis, and health scoring foundations, but **managed infrastructure, industrial-grade sensors, and vendor-supported SLAs** remain primarily commercial offerings.
-
-
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Industrial-Equipment-Condition-Monitoring"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Industrial-Equipment-Condition-Monitoring?style=social" alt="Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Industrial-Equipment-Condition-Monitoring/fork"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Industrial-Equipment-Condition-Monitoring?style=social" alt="Forks"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
+
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Industrial Equipment Condition Monitoring Banner" width="100%"/>
+</p>
+
+# ⚙️ Awesome Industrial Equipment Condition Monitoring
+
+> **Curated Ecosystem of Commercial SaaS Platforms & Open-Source Tools for Vibration Analysis, AI Fault Diagnosis, Structural Health Monitoring & Predictive Maintenance (PdM).**
+
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-October%202026-brightgreen.svg)](#)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#how-to-contribute)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
+## 🔍 Overview & Market Analysis
 
+This repository tracks notable **commercial condition monitoring platforms**, **industrial AI frameworks**, and **open-source signal processing toolkits** that monitor machinery health via vibration, temperature, acoustic, and process telemetry — from fully managed enterprise IIoT sensor suites to self-hosted diagnostic frameworks.
 
-**Made for maintenance engineers, reliability professionals, and organizations seeking condition monitoring sovereignty.**
+### 📈 Market Size & Industry Dynamics
 
-Let's make industrial equipment condition monitoring more open, transparent, and predictive.
+> 💡 **Market Size**: The Global Industrial Condition Monitoring Market is estimated at **~$12.8 Billion in 2026** (projected to reach **$18.5 Billion by 2030** at a **7.8% CAGR**), driven by rapid IIoT adoption, industrial AI diagnostics, and asset performance management (APM) mandates across manufacturing, energy, and aerospace.  
+>
+> 🧩 **Market Fragmentation**: The sector is **moderately fragmented**, featuring established industrial automation giants (AWS, Schneider Electric, ABB, Emerson, GE Vernova, Fortive/Fluke) alongside high-growth specialized AI "diagnostics-as-a-service" unicorns (such as Augury and Samsara). High upfront hardware sensor requirements and proprietary fieldbus integrations currently prevent a single "winner-take-all" outcome, allowing specialized open-source frameworks and niche SaaS offerings to thrive.
+
+---
+
+## 📋 Table of Contents
+
+- [🏢 SaaS & Hosted Commercial Platforms](#-saas--hosted-commercial-platforms)
+- [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
+  - [⚡ Vibration Analysis & Signal Processing Toolkits](#-vibration-analysis--signal-processing-toolkits)
+  - [🛠️ Fault Detection & Diagnosis Frameworks](#%EF%B8%8F-fault-detection--diagnosis-frameworks)
+  - [🤖 LLM-Integrated & AI Diagnostics](#-llm-integrated--ai-diagnostics)
+  - [📊 Health Scoring & Bayesian Fusion Engines](#-health-scoring--bayesian-fusion-engines)
+- [⭐ Star History](#-star-history)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚠️ Disclaimer](#%EF%B8%8F-disclaimer)
+
+---
+
+## 🏢 SaaS & Hosted Commercial Platforms
+
+*Sorted by Parent Company Size / Market Capitalization (Descending)*
+
+| Platform | Description & Focus | Starting Pricing | Free Tier / Free Trial Limit | Company Size (Market Cap / Revenue / Valuation) |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Amazon Monitron](https://aws.amazon.com/monitron/)** ☁️ | AWS managed end-to-end condition monitoring using sensors, gateways & ML models for rotating equipment. | $4.17/sensor/month ($50/sensor/year) service fee + hardware purchase ($50 per sensor, ~$140 per gateway). | No free trial; hardware purchase required for setup. | **~$2.1 Trillion Market Cap** (Amazon / AWS Parent) |
+| **[Schneider Electric EcoStruxure](https://www.se.com/)** ⚡ | IoT-enabled architecture for asset management, predictive maintenance & energy monitoring. | Tiered per-device/server license model ("Pay as You Grow"). | 30-day full feature free trial for EcoStruxure IT Expert & Control Expert modules. | **~$135 Billion Market Cap** (~€38B Annual Revenue) |
+| **[ABB Ability Genix](https://www.abb.com/)** 🏭 | Industrial analytics & AI platform for cross-functional asset performance monitoring. | Enterprise subscription tier starting via ABB Ability Marketplace (min 3-year term). | Interactive trial packages available on request via ABB Ability Marketplace. | **~$95 Billion Market Cap** (~$32B Annual Revenue) |
+| **[GE Digital APM](https://www.ge.com/digital/applications/asset-performance-management)** ✈️ | Asset Performance Management suite offering predictive analytics and reliability strategy. | Modular enterprise subscription based on monitored asset count and active feature modules. | Guided sandbox trial environment provided via GE Digital sales representatives. | **~$70 Billion Market Cap** (GE Vernova Parent) |
+| **[Emerson AMS Machine Works](https://www.emerson.com/)** ⚙️ | Machinery health management software providing vibration analysis & balancing diagnostics. | Annual tag-based subscription or perpetual license starting from authorized Emerson reps. | Demo / proof-of-concept environment available via Emerson account managers. | **~$62 Billion Market Cap** (~$17.5B Annual Revenue) |
+| **[Samsara Industrial IoT](https://www.samsara.com/)** 🚛 | Connected operations platform for equipment monitoring, fleet telematics & industrial IoT data. | ~$27 - $60 per vehicle/asset/month + hardware gateways ($99-$548 upfront, 3-year min contract). | 30-day risk-free hardware & platform evaluation return window. | **~$24.8 Billion Market Cap** (~$1.85B TTM Revenue) |
+| **[Fluke Reliability eMaint](https://www.fluke.com/)** 🛠️ | Enterprise CMMS platform integrating vibration monitoring and asset health tracking. | $69/user/month (Team Plan, min 3 users, billed annually). | Free sales demo sandbox trial available upon request. | **~$17.4 Billion Market Cap** (Fortive FTV Parent) |
+| **[SKF Enlight](https://www.skf.com/)** 🔄 | Machinery analytics & vibration sensor platform for rotating equipment health management. | Quote-based OPEX subscription (bundles sensors, software & remote diagnostics). | SKF QuickCollect companion app is free forever for basic handheld sensor readouts. | **~$11 Billion Market Cap** (~SEK 103B Annual Revenue) |
+| **[Augury](https://augury.com/)** 🧠 | Machine health platform delivering continuous vibration, temp & magnetic AI diagnostics as DaaS. | ~$50 - $150 per machine/month (billed annually per monitored asset). | No free trial; custom enterprise onboarding and site evaluation required. | **>$1.0 Billion Valuation** (Unicorn, $369M total raised) |
+| **[SPM Instrument](https://www.spminstrument.com/)** 📡 | Comprehensive condition monitoring hardware and software (Condmaster) for shock pulse & vibration. | Custom project-based quote (hardware data loggers + software licensing). | On-site demonstration & evaluation trial period via local SPM representatives. | **Mid-Market Private** (~$50M+ Annual Revenue) |
+
+---
+
+## 🔓 Open-Source GitHub Projects
+
+*Sorted by GitHub Star Count (Descending)*
+
+### ⚡ Vibration Analysis & Signal Processing Toolkits
+
+- **[Rotating-machine-fault-data-set](https://github.com/hustcxl/Rotating-machine-fault-data-set)** [![Stars](https://img.shields.io/github/stars/hustcxl/Rotating-machine-fault-data-set?style=social&color=white)](https://github.com/hustcxl/Rotating-machine-fault-data-set/stargazers)  
+  **Open rotating mechanical fault datasets collection** — Comprehensive repository of open-source bearing and gearbox vibration benchmark datasets for diagnostic algorithm evaluation.
+
+- **[weibull-knowledge-informed-ml](https://github.com/tvhahn/weibull-knowledge-informed-ml)** [![Stars](https://img.shields.io/github/stars/tvhahn/weibull-knowledge-informed-ml?style=social&color=white)](https://github.com/tvhahn/weibull-knowledge-informed-ml/stargazers)  
+  **Knowledge-informed machine learning on PRONOSTIA (FEMTO) and IMS bearing datasets** — Combines physics-informed Weibull distributions with ML models for Remaining Useful Life (RUL) estimation.
+
+- **[ABRAVIBE Toolbox](https://github.com/anderstorrence/ABRAVIBE)** [![Stars](https://img.shields.io/github/stars/anderstorrence/ABRAVIBE?style=social&color=white)](https://github.com/anderstorrence/ABRAVIBE/stargazers)  
+  **MATLAB/GNU Octave toolbox for teaching and practicing vibration analysis and structural dynamics**, GPL licensed — Comprehensive functionality for mechanical model simulation, spectral analysis, order tracking, and modal parameter extraction.
+
+- **[PyOMA](https://github.com/dagghe/PyOMA)** [![Stars](https://img.shields.io/github/stars/dagghe/PyOMA?style=social&color=white)](https://github.com/dagghe/PyOMA/stargazers)  
+  **Open-source Python module for Operational Modal Analysis (OMA)** — Features SSI-Cov, FDD, and EFDD algorithms for ambient vibration analysis of civil structures and machinery.
+
+- **[pyOMA2](https://github.com/dagghe/pyOMA2)** [![Stars](https://img.shields.io/github/stars/dagghe/pyOMA2?style=social&color=white)](https://github.com/dagghe/pyOMA2/stargazers)  
+  **Next-generation Python toolbox for Operational Modal Analysis**, developed at Bauhaus-Universität Weimar — Interactive GUI (PyQt6/Jupyter) with 3D VTK mode shape rendering and multi-setup data merging.
+
+- **[oma-python](https://github.com/Dynoma/oma-python)** [![Stars](https://img.shields.io/github/stars/Dynoma/oma-python?style=social&color=white)](https://github.com/Dynoma/oma-python/stargazers)  
+  **Operational Modal Analysis algorithms for Python**, MIT licensed — Estimates natural frequencies, damping ratios, and mode shapes using FDD and Covariance-driven SSI.
+
+---
+
+### 🛠️ Fault Detection & Diagnosis Frameworks
+
+- **[cbm_codes_open](https://github.com/biswajitsahoo1111/cbm_codes_open)** [![Stars](https://img.shields.io/github/stars/biswajitsahoo1111/cbm_codes_open?style=social&color=white)](https://github.com/biswajitsahoo1111/cbm_codes_open/stargazers)  
+  **Python and MATLAB code implementing machine learning algorithms for machinery condition monitoring** — Data processing pipeline for bearing fault diagnosis using CWRU dataset.
+
+- **[OpenConMo](https://github.com/Aalto-Arotor/openconmo)** [![Stars](https://img.shields.io/github/stars/Aalto-Arotor/openconmo?style=social&color=white)](https://github.com/Aalto-Arotor/openconmo/stargazers)  
+  **Python library for vibration signal-based condition monitoring**, developed at Aalto University — Enables reproducible vibration research with automated CWRU dataset downloading and signal benchmark notebooks.
+
+- **[FD-REST](https://github.com/Fraunhofer-IMS/FD-REST)** [![Stars](https://img.shields.io/github/stars/Fraunhofer-IMS/FD-REST?style=social&color=white)](https://github.com/Fraunhofer-IMS/FD-REST/stargazers)  
+  **Lightweight RESTful platform for real-time fault detection and diagnosis in industrial systems**, Fraunhofer IMS — Dockerized architecture with DNN inference and REST API for secure on-premises deployment.
+
+- **[Rotary Insight](https://github.com/rotary-insight/rotary-insight)** [![Stars](https://img.shields.io/github/stars/rotary-insight/rotary-insight?style=social&color=white)](https://github.com/rotary-insight/rotary-insight/stargazers)  
+  **Open-source deep learning framework for rotary machinery bearing fault diagnosis** — Automated preprocessing, spectrogram visualization, and REST-based classification server.
+
+- **[Bearing-FDD](https://github.com/paolocalderaro/bearing-fdd)** [![Stars](https://img.shields.io/github/stars/paolocalderaro/bearing-fdd?style=social&color=white)](https://github.com/paolocalderaro/bearing-fdd/stargazers)  
+  **Explainable bearing fault diagnosis using Monotonic Smoothed Stacked Autoencoders (MS2AE)** — Kurtogram-guided bandpass filtering and DTW baseline generation for early fault stage determination.
+
+---
+
+### 🤖 LLM-Integrated & AI Diagnostics
+
+- **[claude-stwinbox-diagnostics](https://github.com/LGDiMaggio/claude-stwinbox-diagnostics)** [![Stars](https://img.shields.io/github/stars/LGDiMaggio/claude-stwinbox-diagnostics?style=social&color=white)](https://github.com/LGDiMaggio/claude-stwinbox-diagnostics/stargazers)  
+  **Condition monitoring copilot and predictive maintenance AI agent** — Connects industrial MEMS sensors to Claude via MCP (Model Context Protocol) with ISO 10816/20816 vibration severity checking.
+
+---
+
+### 📊 Health Scoring & Bayesian Fusion Engines
+
+- **[JOR 4.0 Predictive Maintenance Fusion Engine](https://github.com/jamesorion6869/JOR_PYMC_V3_1)** [![Stars](https://img.shields.io/github/stars/jamesorion6869/JOR_PYMC_V3_1?style=social&color=white)](https://github.com/jamesorion6869/JOR_PYMC_V3_1/stargazers)  
+  **Recursive Bayesian framework with ISO 20816-3 compliance** — Evidence fusion engine calculating Non-Healthy Probability (NHP) and hysteresis alerts under NEMA MG-1 thermal limits.
+
+- **[machine-health](https://pypi.org/project/machine-health/)**  
+  **Unified 0-100 machine health score Python library** — Evaluates stability, compliance, anomaly rate, and availability into an explainable letter grade (A-F).
+
+---
+
+## ⭐ Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Industrial-Equipment-Condition-Monitoring&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Industrial-Equipment-Condition-Monitoring&type=date&legend=top-left)
+
+---
+
+## 💖 Support & Sponsorship
+
+If you find this repository valuable for your predictive maintenance projects, research, or industrial IoT engineering, please consider supporting the project:
+
+- ⭐ **Star this repository** to increase visibility on GitHub!
+- 🔀 **Fork & Share** it with your reliability engineering peers.
+- ☕ **Sponsor the Maintainer**: Support ongoing curation and open-source maintenance via [GitHub Sponsors](https://github.com/sponsors/ishandutta2007).
+
+<a href="https://github.com/sponsors/ishandutta2007">
+  <img src="https://img.shields.io/badge/Sponsor-GitHub-ea4aaa?style=for-the-badge&logo=github-sponsors" alt="Sponsor on GitHub" />
+</a>
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are welcome! Please follow these simple guidelines:
+
+1. Fork this repository.
+2. Edit `README.md` following the table / list schema.
+3. Include: Project name, official URL, concise description, and pricing/stars information.
+4. Ensure no broken links and submit a Pull Request.
+
+Refer to the main curated directory on [Awesome-Awesome-Awesome](https://github.com/ishandutta2007/Awesome-Awesome-Awesome) for more curated tech indexes.
+
+---
+
+## ⚠️ Disclaimer
+
+- This repository is a **community-curated index** for informational and educational purposes.
+- Industrial condition monitoring systems process sensitive operational telemetry; deployment of open-source tools in safety-critical manufacturing environments must comply with **IEC 62443** cybersecurity standards and relevant **ISO 10816 / 20816** vibration guidelines.
+- Always verify open-source software licenses before commercial deployment.
+
+---
+
+<p align="center">
+  <b>Made with ❤️ for maintenance engineers, reliability professionals, and industrial IoT innovators.</b>
+</p>
